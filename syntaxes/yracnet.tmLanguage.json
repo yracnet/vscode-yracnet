@@ -1,0 +1,87 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Yracnet Source Code",
+	"patterns": [
+		{
+			"include": "#jscode"
+		},
+		{
+			"include": "#text"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "text.xml"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "keyword",
+			"match": "\\$\\{[^}]*\\}"
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "strong",
+					"match": "\\b(public|private|class|import|extends|package|enum|interface)\\b"
+				},
+				{
+					"name": "strong",
+					"match": "@([a-zA-Z0-9]*)"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.block",
+					"match": "\\/\\/.*$\\n?"
+				},
+				{
+					"name": "comment.block",
+					"begin": "\\/\\*",
+					"end": "\\*\\/"
+				}
+			]
+		},
+		"jscode": {
+			"patterns": [
+				{
+					"name": "invalid.illegal",
+					"begin": "{%",
+					"end": "%}"
+				},
+				{
+					"name": "string",
+					"begin": "<%",
+					"end": "%>",
+					"patterns": [
+						{
+							"include": "source.js"
+						}
+					]
+				}
+			]
+		},
+		"text": {
+			"begin": "<\\!\\[CDATA\\[",
+			"end": "\\]\\]>",
+			"patterns": [
+				{
+					"include": "source.yrc"
+				},
+				{
+					"include": "source.txt"
+				}
+			]
+		}
+	},
+	"scopeName": "source.yrc"
+}

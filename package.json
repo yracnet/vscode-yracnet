@@ -1,0 +1,36 @@
+{
+    "name": "vscode-yracnet",
+    "displayName": "vscode-yracnet",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "yracnet",
+                "aliases": [
+                    "Yracnet Source Code",
+                    "yracnet"
+                ],
+                "extensions": [
+                    ".yrc",
+                    ".xml"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "yracnet",
+                "scopeName": "source.yrc",
+                "path": "./syntaxes/yracnet.tmLanguage.json",
+                "embeddedLanguages": {}
+            }
+        ]
+    }
+}
