@@ -1,8 +1,19 @@
 {
-    "name": "vscode-yracnet",
-    "displayName": "vscode-yracnet",
-    "description": "",
+    "name": "vscode-yracnet-plugin",
+    "displayName": "vscode-yracnet-plugin",
+    "description": "Yracnet Source Template",
     "version": "0.0.1",
+    "publisher": "yracnet",
+    "author": {
+        "name": "Willyams Yujra",
+        "email": "yracnet@gmail.com"
+    },
+    "homepage": "https://github.com/yracnet/vscode-yracnet-plugin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yracnet/vscode-yracnet-plugin"
+    },
+    "license": "MIT",
     "engines": {
         "vscode": "^1.56.0"
     },
@@ -19,7 +30,8 @@
                 ],
                 "extensions": [
                     ".yrc",
-                    ".xml"
+                    ".xml",
+                    ".txt"
                 ],
                 "configuration": "./language-configuration.json"
             }
