@@ -74,7 +74,17 @@
 			"patterns": [
 				{
 					"begin": "<\\!\\[CDATA\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"end": "\\]\\]>",
+					"endCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"patterns": [
 						{
 							"include": "source.yrc"
@@ -86,7 +96,17 @@
 				},
 				{
 					"begin": "<\\!--\\[CDATA\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"end": "\\]\\]-->",
+					"endCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"patterns": [
 						{
 							"include": "source.yrc"
@@ -98,7 +118,17 @@
 				},
 				{
 					"begin": "<\\!--",
+					"beginCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"end": "-->",
+					"endCaptures": {
+						"0": {
+							"name": "comment.line"
+						}
+					},
 					"patterns": [
 						{
 							"include": "source.yrc"
