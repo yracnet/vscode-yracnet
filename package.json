@@ -2,7 +2,7 @@
     "name": "vscode-yracnet-plugin",
     "displayName": "vscode-yracnet-plugin",
     "description": "Yracnet Source Template",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "yracnet",
     "author": {
         "name": "Willyams Yujra",
@@ -20,6 +20,11 @@
     "categories": [
         "Programming Languages"
     ],
+	"keywords": [
+		"yracnet",
+		"source",
+		"code"
+	],
     "contributes": {
         "languages": [
             {

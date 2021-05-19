@@ -71,14 +71,42 @@
 			]
 		},
 		"text": {
-			"begin": "<\\!\\[CDATA\\[",
-			"end": "\\]\\]>",
 			"patterns": [
 				{
-					"include": "source.yrc"
+					"begin": "<\\!\\[CDATA\\[",
+					"end": "\\]\\]>",
+					"patterns": [
+						{
+							"include": "source.yrc"
+						},
+						{
+							"include": "source.txt"
+						}
+					]
 				},
 				{
-					"include": "source.txt"
+					"begin": "<\\!--\\[CDATA\\[",
+					"end": "\\]\\]-->",
+					"patterns": [
+						{
+							"include": "source.yrc"
+						},
+						{
+							"include": "source.txt"
+						}
+					]
+				},
+				{
+					"begin": "<\\!--",
+					"end": "-->",
+					"patterns": [
+						{
+							"include": "source.yrc"
+						},
+						{
+							"include": "source.txt"
+						}
+					]
 				}
 			]
 		}
